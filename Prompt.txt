@@ -1,0 +1,6 @@
+I would like to write a Python program that does the following:
+- Align the sanger sequence results in "*.ab1" files with the reference sequence in "*.gb" files using MAFFT.
+- Extract the aligned sequences from the MAFFT output.
+- For each annotated features in the "*.gb" files, extract the sequences from the aligned sequences.
+- Write the extracted sequences to a file with the annotated feature name and position.
+Can you help me write this program?

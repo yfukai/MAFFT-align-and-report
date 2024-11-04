@@ -1,0 +1,6 @@
+name: align_MAFFT
+channels:
+  - bioconda
+dependencies:
+  - biopython
+  - mafft
