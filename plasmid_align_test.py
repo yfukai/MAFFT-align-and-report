@@ -14,23 +14,19 @@ from Bio.Align import substitution_matrices
 from aligner import DNAPairwiseAligner
 from utils import extract_good_region, summarize_mismatch
 # %%
-
-ab1_files = [
-    "testdata/example2/241023-pYF061-#2-SPYF009-PREMIX_ID1.ab1",
-    "testdata/example2/241023-pYF061-#2-SPYF010-PREMIX_ID4.ab1"
-]
-rev_complements = [False, True]
-
+ab1_file = "testdata/example2/241023-pYF061-#13-SPYF009-PREMIX_ID1.ab1"
+ab1_file = "testdata/example2/241023-pYF061-#2-SPYF009-PREMIX_ID1.ab1"
 gb_file = "testdata/example2/pyf061-601x6-30bp-linker-bsmbi.gb"
+rev_complement = False
 feature_names = ["linker","601"]
 feature_type = "misc_feature"
+best_alignment, features_df = align_sequence_files.align_sequence_files(ab1_file, gb_file, rev_complement, feature_names, feature_type)
+features_df
 
-features_dfs = []
-for ab1_file, rev_complement in zip(ab1_files, rev_complements):
-    best_alignment, features_df = align_sequence_files.align_sequence_files(ab1_file, gb_file, rev_complement, feature_names, feature_type)
 
 
 # %%
+ab1_file = "testdata/example2/241023-pYF061-#2-SPYF010-PREMIX_ID4.ab1"
 gb_file = "testdata/example2/pyf061-601x6-30bp-linker-bsmbi.gb"
 rev_complement = True
 feature_names = ["linker","601"]
